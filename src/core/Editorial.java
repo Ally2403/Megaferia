@@ -38,4 +38,30 @@ public class Editorial {
         }
         return false;
     }
+    
+    public boolean addStand(Stand stand){
+        if(!this.stands.contains(stand)){
+            this.stands.add(stand);
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return getClass().getSimpleName() + "(" + this.nit + ", " + this.nombre + ')';
+    }
+
+    public Gerente getGerente() {
+        return gerente;
+    }
+
+    public ArrayList<Stand> getStands() {
+        return stands;
+    }
+
+    public ArrayList<Libro> getLibros() {
+        return libros;
+    }
+    
 }

@@ -36,5 +36,17 @@ public abstract class Libro {
         this.editorial.addLibro(this);
     }
 
+    public Editorial getEditorial() {
+        return editorial;
+    }
+
+    public ArrayList<Autor> getAutores() {
+        return autores;
+    }
+
+    @Override
+    public String toString() {
+        return getClass().getSimpleName() + "(" + this.titulo + ", " + this.isbn + ')';
+    }
     
 }

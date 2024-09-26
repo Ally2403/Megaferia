@@ -28,12 +28,22 @@ public class Stand {
     public int getId(){
         return this.id;
     }
+    
+    public boolean addEditorial(Editorial editorial){
+        if(!this.editoriales.contains(editorial)){
+            this.editoriales.add(editorial);
+            return true;
+        }
+        return false;
+    }
 
     @Override
     public String toString() {
         return getClass().getSimpleName() + "(" + id + ", " + costo + ')';
     }
-    
-    
+
+    public ArrayList<Editorial> getEditoriales() {
+        return editoriales;
+    }
     
 }
